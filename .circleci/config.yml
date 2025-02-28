@@ -3,12 +3,14 @@
 version: 2.1
 orbs:
   node: circleci/node@5
+  browser-tools: circleci/browser-tools@1.4.0
 jobs:
   test-node:
     # Install node dependencies and run tests
     executor: node/default
     steps:
       - checkout
+      - browser-tools/install-chrome: channel: stable
       - node/install-packages:
           pkg-manager: npm
       - run:
