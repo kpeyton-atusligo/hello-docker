@@ -1,6 +1,6 @@
 # line 3 initialises build stage and sets base image called build
 # using node here as base image
-FROM node:21-alpine3.18 AS build
+FROM node:22.8-alpine AS build
 # line 5 which port the app will listen on
 EXPOSE 80
 # line 8 -if directory does not exist, WORKDIR creates it
