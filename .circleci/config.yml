@@ -4,6 +4,8 @@ version: 2.1
 orbs:
   node: circleci/node@5
   browser-tools: circleci/browser-tools@1.4.0
+  environment:
+      - CHROME_BIN: /usr/lib/chromium/chrome
 jobs:
   test-node:
     # Install node dependencies and run tests
